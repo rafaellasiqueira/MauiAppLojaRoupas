@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLojaRoupas.Views.NovoProduto"
+             Title="NovoProduto">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Categoria:"/>
+            <Picker x:Name="pickerCategoria">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Camiseta</x:String>
+                        <x:String>Calça</x:String>
+                        <x:String>Vestido</x:String>
+                        <x:String>Jaqueta</x:String>
+                        <x:String>Shorts</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Tamanho:"/>
+            <Picker x:Name="pickerTamanho">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>P</x:String>
+                        <x:String>M</x:String>
+                        <x:String>G</x:String>
+                        <x:String>GG</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Cor"/>
+            <Picker x:Name="pickerCor">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Azul</x:String>
+                        <x:String>Cinza</x:String>
+                        <x:String>Branco</x:String>
+                        <x:String>Preto</x:String>
+                        <x:String>Verde</x:String>
+                        <x:String>Vermelho</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+
+            <Label Text="Quantidade:"/>
+            <Entry x:Name="txtQuantidade" Keyboard="Numeric"/>
+
+            <Label Text="Preço Unitário:"/>
+            <Entry x:Name="txtPreco" Keyboard="Numeric"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
